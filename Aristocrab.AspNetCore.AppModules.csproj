@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    </PropertyGroup>
+    
+    <PropertyGroup>
+		<PackageId>Aristocrab.AspNetCore.AppModules</PackageId>
+		<Title>Aristocrab.AspNetCore.AppModules</Title>
+		<Version>0.2.0</Version>
+		<Authors>Aristocrab</Authors>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageTags>aspnetcore,modules,plugins,appmodules</PackageTags>
+        <Description>AppModules for ASP.NET Core.</Description>
+        <RepositoryUrl>https://github.com/Aristocrab/Aristocrab.AspNetCore.AppModules</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/Aristocrab/Aristocrab.AspNetCore.AppModules</PackageProjectUrl>
+	</PropertyGroup>
+	
+    <ItemGroup>
+      <FrameworkReference Include="Microsoft.AspNetCore.App" Version="2.2.8" />
+    </ItemGroup>
+	
+    <ItemGroup>
+	  <None Include="README.md">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
+	</ItemGroup>
+
+</Project>
