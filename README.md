@@ -25,7 +25,7 @@ app.Run();
 
 CommonModule.cs
 ```csharp
-using Aristocrab.AspNetCore.AppModules.ModuleTypes;
+using Aristocrab.AspNetCore.AppModules;
 
 namespace KoineCrm.WebApi.Modules.Common;
 
