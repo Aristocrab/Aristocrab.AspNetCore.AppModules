@@ -17,6 +17,7 @@
         <Description>AppModules for ASP.NET Core.</Description>
         <RepositoryUrl>https://github.com/Aristocrab/Aristocrab.AspNetCore.AppModules</RepositoryUrl>
         <PackageProjectUrl>https://github.com/Aristocrab/Aristocrab.AspNetCore.AppModules</PackageProjectUrl>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
 	</PropertyGroup>
 	
     <ItemGroup>
@@ -24,10 +25,7 @@
     </ItemGroup>
 	
     <ItemGroup>
-	  <None Include="README.md">
-	    <Pack>True</Pack>
-	    <PackagePath>\</PackagePath>
-	  </None>
+	  <None Include="README.md" Pack="true" PackagePath="\"/>
 	</ItemGroup>
 
 </Project>

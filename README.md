@@ -1,22 +1,16 @@
-<div align="center">
+# Aristocrab.AspNetCore.AppModules
+Library that can help you organize your ASP.NET Core application into modules
 
----
-
-### Aristocrab.AspNetCore.AppModules
-#### library that can help you organize your ASP.NET Core application into modules
-
-[![NuGet](https://img.shields.io/nuget/v/Aristocrab.AspNetCore.AppModules.svg)](https://www.nuget.org/packages/Aristocrab.AspNetCore.AppModules/)
-[![NuGet](https://img.shields.io/nuget/dt/Aristocrab.AspNetCore.AppModules.svg)](https://www.nuget.org/packages/Aristocrab.AspNetCore.AppModules/)
+![NuGet](https://img.shields.io/nuget/v/Aristocrab.AspNetCore.AppModules.svg)
+![NuGet](https://img.shields.io/nuget/dt/Aristocrab.AspNetCore.AppModules.svg)
 
 `dotnet add package Aristocrab.AspNetCore.AppModules`
 
 ---
 
-</div>
+Example
 
-## Example
-
-`Program.cs`
+Program.cs
 ```csharp
 using Aristocrab.AspNetCore.AppModules;
 
@@ -29,9 +23,9 @@ app.UseModules();
 app.Run();
 ```
 
-`CommonModule.cs`
+CommonModule.cs
 ```csharp
-using Aristocrab.AspNetCore.AppModules;
+using Aristocrab.AspNetCore.AppModules.ModuleTypes;
 
 namespace KoineCrm.WebApi.Modules.Common;
 
