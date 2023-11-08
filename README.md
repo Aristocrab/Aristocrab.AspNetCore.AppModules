@@ -1,5 +1,5 @@
 # Aristocrab.AspNetCore.AppModules
-Library that can help you organize your ASP.NET Core application into modules
+Library that can help you organize your ASP.NET Core application into modules.
 
 ![NuGet](https://img.shields.io/nuget/v/Aristocrab.AspNetCore.AppModules.svg)
 ![NuGet](https://img.shields.io/nuget/dt/Aristocrab.AspNetCore.AppModules.svg)
@@ -8,9 +8,9 @@ Library that can help you organize your ASP.NET Core application into modules
 
 ---
 
-Example
+## Example
 
-Program.cs
+`Program.cs`
 ```csharp
 using Aristocrab.AspNetCore.AppModules;
 
@@ -23,7 +23,7 @@ app.UseModules();
 app.Run();
 ```
 
-CommonModule.cs
+`CommonModule.cs`
 ```csharp
 using Aristocrab.AspNetCore.AppModules;
 
