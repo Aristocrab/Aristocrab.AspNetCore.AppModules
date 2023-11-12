@@ -1,8 +1,8 @@
-# Aristocrab.AspNetCore.AppModules
+# Aristocrab.AspNetCore.AppModules [(nuget)](https://www.nuget.org/packages/Aristocrab.AspNetCore.AppModules/)
 Library that can help you organize your ASP.NET Core application into modules.
 
-![NuGet](https://img.shields.io/nuget/v/Aristocrab.AspNetCore.AppModules.svg)
-![NuGet](https://img.shields.io/nuget/dt/Aristocrab.AspNetCore.AppModules.svg)
+[![NuGet](https://img.shields.io/nuget/v/Aristocrab.AspNetCore.AppModules.svg)](https://www.nuget.org/packages/Aristocrab.AspNetCore.AppModules/)
+[![NuGet](https://img.shields.io/nuget/dt/Aristocrab.AspNetCore.AppModules.svg)](https://www.nuget.org/packages/Aristocrab.AspNetCore.AppModules/)
 
 `dotnet add package Aristocrab.AspNetCore.AppModules`
 
