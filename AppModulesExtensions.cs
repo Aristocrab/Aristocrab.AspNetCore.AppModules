@@ -4,16 +4,29 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace Aristocrab.AspNetCore.AppModules;
 
+/// <summary>
+/// Provides extension methods for discovering and executing <see cref="AppModule"/> instances
+/// from assemblies in an ASP.NET Core application.
+/// </summary>
 public static class AppModulesExtensions
 {
     private static readonly Func<Type, bool> IsNonAbstractAppModule =
         type => typeof(AppModule).IsAssignableFrom(type) && !type.IsAbstract;
 
+    /// <summary>
+    /// Discovers and registers modules from the calling assembly into the DI container.
+    /// </summary>
+    /// <param name="builder">The application builder.</param>
     public static void AddModules(this WebApplicationBuilder builder)
     {
         AddModules(builder, Assembly.GetCallingAssembly());
     }
 
+    /// <summary>
+    /// Discovers and registers modules from the specified assemblies into the DI container.
+    /// </summary>
+    /// <param name="builder">The application builder.</param>
+    /// <param name="assemblies">Assemblies to scan for modules.</param>
     public static void AddModules(this WebApplicationBuilder builder, params Assembly[] assemblies)
     {
         AddAppModules(builder, assemblies);
@@ -39,14 +52,18 @@ public static class AppModulesExtensions
                          .OrderBy(x => x.OrderIndex))
             {
                 instance.ConfigureServices(builder);
-
                 modulesCollection.AppModules.Add(instance);
             }
         }
-            
+
         builder.Services.AddSingleton(modulesCollection);
     }
 
+    /// <summary>
+    /// Configures the application pipeline by calling <see cref="AppModule.ConfigureApplication"/>
+    /// on all enabled modules in the order defined by <see cref="AppModule.OrderIndex"/>.
+    /// </summary>
+    /// <param name="app">The application instance.</param>
     public static void UseModules(this WebApplication app)
     {
         var modulesCollection = app.Services.GetRequiredService<AppModulesCollection>();
