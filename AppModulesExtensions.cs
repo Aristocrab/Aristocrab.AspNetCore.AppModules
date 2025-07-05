@@ -1,7 +1,6 @@
 using System.Reflection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 
 namespace Aristocrab.AspNetCore.AppModules
 {
@@ -23,7 +22,6 @@ namespace Aristocrab.AspNetCore.AppModules
         private static void AddAppModules(this WebApplicationBuilder builder, params Assembly[] assemblies)
         {
             var modulesCollection = new AppModulesCollection();
-            ILogger<AppModule>? logger = null;
 
             foreach (var assembly in assemblies)
             {
@@ -45,18 +43,8 @@ namespace Aristocrab.AspNetCore.AppModules
 
                     modulesCollection.AppModules.Add(instance);
                 }
-
-                logger ??= builder.Services
-                    .BuildServiceProvider()
-                    .GetRequiredService<ILogger<AppModule>>();
-                logger.LogDebug("Assembly: {Assembly} ({Count})", assembly.GetName().Name, instances.Count);
-
-                foreach (var instance in instances.OrderBy(x => x.GetType().Name))
-                {
-                    logger.LogDebug("{Type} (Enabled: {Enabled})",
-                        instance.GetType().Name, instance.Enabled);
-                }
             }
+            
             builder.Services.AddSingleton(modulesCollection);
         }
 
