@@ -34,12 +34,11 @@ namespace Aristocrab.AspNetCore.AppModules
                     .Cast<AppModule>()
                     .ToList();
 
-                foreach (var instance in instances.OrderBy(x => x.OrderIndex))
+                foreach (var instance in instances
+                             .Where(module => module.Enabled)
+                             .OrderBy(x => x.OrderIndex))
                 {
-                    if (instance.Enabled)
-                    {
-                        instance.ConfigureServices(builder);
-                    }
+                    instance.ConfigureServices(builder);
 
                     modulesCollection.AppModules.Add(instance);
                 }
@@ -52,7 +51,9 @@ namespace Aristocrab.AspNetCore.AppModules
         {
             var modulesCollection = app.Services.GetRequiredService<AppModulesCollection>();
 
-            foreach (var module in modulesCollection.AppModules.Where(module => module.Enabled))
+            foreach (var module in modulesCollection.AppModules
+                         .Where(module => module.Enabled)
+                         .OrderBy(x => x.OrderIndex))
             {
                 module.ConfigureApplication(app);
             }
