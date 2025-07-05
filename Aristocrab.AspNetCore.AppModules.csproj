@@ -15,7 +15,7 @@
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageTags>aspnetcore appmodules modules</PackageTags>
         <Description>AppModules for ASP.NET Core.</Description>
-        <RepositoryUrl>https://github.com/Aristocrab/Aristocrab.AspNetCore.AppModules</RepositoryUrl>
+        <RepositoryUrl>https://github.com/Aristocrab/Aristocrab.AspNetCore.AppModules.git</RepositoryUrl>
         <PackageProjectUrl>https://github.com/Aristocrab/Aristocrab.AspNetCore.AppModules</PackageProjectUrl>
         <RepositoryType>git</RepositoryType>
         <PackageReadmeFile>README.md</PackageReadmeFile>
