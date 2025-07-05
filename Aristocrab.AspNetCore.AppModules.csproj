@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net7.0</TargetFramework>
+        <TargetFramework>net9.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
@@ -10,13 +10,14 @@
     <PropertyGroup>
 		<PackageId>Aristocrab.AspNetCore.AppModules</PackageId>
 		<Title>Aristocrab.AspNetCore.AppModules</Title>
-		<Version>0.3.0</Version>
+		<Version>0.4.0</Version>
 		<Authors>Aristocrab</Authors>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageTags>aspnetcore appmodules modules</PackageTags>
         <Description>AppModules for ASP.NET Core.</Description>
         <RepositoryUrl>https://github.com/Aristocrab/Aristocrab.AspNetCore.AppModules</RepositoryUrl>
         <PackageProjectUrl>https://github.com/Aristocrab/Aristocrab.AspNetCore.AppModules</PackageProjectUrl>
+        <RepositoryType>git</RepositoryType>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageIcon>logo.png</PackageIcon>
 	</PropertyGroup>
