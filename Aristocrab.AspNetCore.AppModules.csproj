@@ -10,7 +10,7 @@
     <PropertyGroup>
         <PackageId>Aristocrab.AspNetCore.AppModules</PackageId>
         <Title>Aristocrab.AspNetCore.AppModules</Title>
-        <Version>0.4.3</Version>
+        <Version>0.4.4</Version>
         <Authors>Aristocrab</Authors>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageTags>aspnetcore appmodules modules</PackageTags>
