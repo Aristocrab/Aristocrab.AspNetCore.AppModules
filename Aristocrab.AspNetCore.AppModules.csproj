@@ -8,11 +8,11 @@
     </PropertyGroup>
     
     <PropertyGroup>
-		<PackageId>Aristocrab.AspNetCore.AppModules</PackageId>
-		<Title>Aristocrab.AspNetCore.AppModules</Title>
-		<Version>0.4.2</Version>
-		<Authors>Aristocrab</Authors>
-		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageId>Aristocrab.AspNetCore.AppModules</PackageId>
+        <Title>Aristocrab.AspNetCore.AppModules</Title>
+        <Version>0.4.2</Version>
+        <Authors>Aristocrab</Authors>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageTags>aspnetcore appmodules modules</PackageTags>
         <Description>AppModules for ASP.NET Core.</Description>
         <RepositoryUrl>https://github.com/Aristocrab/Aristocrab.AspNetCore.AppModules.git</RepositoryUrl>
@@ -20,18 +20,18 @@
         <RepositoryType>git</RepositoryType>
         <PackageReadmeFile>README.md</PackageReadmeFile>
         <PackageIcon>logo.png</PackageIcon>
-	</PropertyGroup>
-	
-  <ItemGroup>
-    <FrameworkReference Include="Microsoft.AspNetCore.App" Version="2.2.8" />
-  </ItemGroup>
-	
-  <ItemGroup>
-	  <None Include="README.md" Pack="true" PackagePath="\"/>
-	</ItemGroup>
-	
-  <ItemGroup>
-	  <None Include="logo.png" Pack="true" PackagePath="\"/>
-	</ItemGroup>
+    </PropertyGroup>
+    
+    <ItemGroup>
+        <FrameworkReference Include="Microsoft.AspNetCore.App" Version="2.2.8" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <None Include="README.md" Pack="true" PackagePath="\"/>
+    </ItemGroup>
+    
+    <ItemGroup>
+        <None Include="logo.png" Pack="true" PackagePath="\"/>
+    </ItemGroup>
 
 </Project>
